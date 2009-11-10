@@ -1,0 +1,43 @@
+= pastatus
+
+  Pastatus parses output from the command line tool 'passenger-status' and
+  records it in a csv file. 'passenger-status' is the tool most people would
+  use to check the status of their Ruby on Rails applications that are hosted
+  on an Apache/Passenger or Nginx/Passenger server setup.
+  The script is most useful when run as a cron job once every couple of minutes 
+  to record the health of all applications in your Passenger server.
+
+  The tool...
+
+  * appends data if the file already exists.
+  * records NO DATA if there are no applications running.
+  * you must have root privileges for the 'passenger-status' tool to run.
+  * If you are on a non-linux OS (e.g. Solaris or Windows) or need to run 
+    something other than the following to access passenger-status:
+    
+    sudo passenger-status
+
+    You can edit the call in the file "lib/pastatus/passenger_parser.rb"
+    around line 50. (If this proves to be a semi-popular gem, I might 
+    fix this later.)
+
+== Example
+
+  This command records the current passenger status to file 'foo.txt'.
+
+    +pastatus foo.txt+
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but
+   bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2009 Bernie Telles. See LICENSE for details.
