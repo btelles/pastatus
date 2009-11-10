@@ -22,7 +22,6 @@ describe PassengerParser do
     end
   end
   describe 'parse one file' do
-  require 'ruby-debug'
     before do
       @pp = PassengerParser.new(:directory_pattern => File.dirname(__FILE__) + '/../fixtures/*.msg')
       @pp.process_status

@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "pastatus"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Store passenger-status data in a CSV file through the command line}
+    gem.description = %Q{Store passenger-status data in a CSV file through the command line}
     gem.email = "bernardo.telles@dms.myflorida.com"
     gem.homepage = "http://github.com/btelles/pastatus"
     gem.authors = ["Bernie Telles"]

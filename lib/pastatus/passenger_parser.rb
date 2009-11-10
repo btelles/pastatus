@@ -1,7 +1,6 @@
 require 'rake'
 require 'fastercsv'
 require 'mapi/msg'
-require 'ruby-debug'
 class EmptyPassengerLogDirectory < StandardError; end
 
 # =Usage
