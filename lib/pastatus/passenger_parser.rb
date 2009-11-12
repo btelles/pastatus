@@ -20,8 +20,7 @@ class EmptyPassengerLogDirectory < StandardError; end
 #
 class PassengerParser
   attr_accessor :file_list
-  
-  
+
   def initialize(*args)
     if args[0][:local_passenger]
       @retrieve_type = :local
